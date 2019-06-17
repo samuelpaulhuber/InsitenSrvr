@@ -1,0 +1,14 @@
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\bin\Debug\netcoreapp2.1\data.json
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\bin\Debug\netcoreapp2.1\InsitenServer.deps.json
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\bin\Debug\netcoreapp2.1\InsitenServer.runtimeconfig.json
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\bin\Debug\netcoreapp2.1\InsitenServer.runtimeconfig.dev.json
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\bin\Debug\netcoreapp2.1\InsitenServer.dll
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\bin\Debug\netcoreapp2.1\InsitenServer.pdb
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.csproj.CoreCompileInputs.cache
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.RazorAssemblyInfo.cache
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.RazorAssemblyInfo.cs
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.AssemblyInfoInputs.cache
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.AssemblyInfo.cs
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.RazorTargetAssemblyInfo.cache
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.dll
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.pdb

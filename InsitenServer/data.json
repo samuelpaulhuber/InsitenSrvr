@@ -1,0 +1,26 @@
+  [
+    {
+      "id": 1,
+      "name": "Test Target",
+      "status": "1",
+      "address1": "234 Ackwood Circle",
+      "address2": null,
+      "city": "Pharon",
+      "state": "TN",
+      "contacts": [
+        {
+          "contactName": "Bob Smith",
+          "contactPhone": "1234567890",
+          "contactEmail": "bob.smith@testtarget.com",
+          "contactPosition": "CEO"
+        }
+      ],
+      "yearlyRevenue": [
+        {
+          "year": 2015,
+          "grossRevenue": 1263380,
+          "profit": 579888
+        }
+      ]
+    }
+  ]
