@@ -49,15 +49,15 @@ namespace InsitenServer
             return companies.FirstOrDefault(x => x.id == id);
         }
 
-        public static string RemoveCompany(int id)
+        public static List<Company> RemoveCompany(int id)
         {
             var companies = GetCompanies().ToList();
             var companyToRemove = GetCompany(id);
 
-            companies.Remove(companyToRemove);
+            var index = companies.RemoveAll((x) => x.id == id);
             UpdateFile(Newtonsoft.Json.JsonConvert.SerializeObject(companies.ToArray()));
 
-            return companyToRemove.name;
+            return companies;
         }
 
         /// <summary>
@@ -77,7 +77,8 @@ namespace InsitenServer
             else
             {
                 //add the company
-                id = company.id = companies.Max(x => x.id) + 1;
+                id = companies == null || companies.Count == 0 ? 1 : companies.Max(x => x.id);
+                company.id = id;
                 companies.Add(company);
             }
 
