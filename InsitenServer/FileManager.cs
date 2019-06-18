@@ -38,53 +38,52 @@ namespace InsitenServer
             return JsonConvert.DeserializeObject<List<Company>>(File.ReadAllText(fullPath));
         }
 
-        ///// <summary>
-        ///// Calls GetCompanies and returns the company with the id specified
-        ///// </summary>
-        ///// <param name="id">Id to search for</param>
-        ///// <returns>Company</returns>
-        //public static Company GetCompany(int id)
-        //{
-        //    var companies = GetCompanies().ToList();
-        //    return companies.FirstOrDefault(x => x.id == id);
-        //}
+        /// <summary>
+        /// Calls GetCompanies and returns the company with the id specified
+        /// </summary>
+        /// <param name="id">Id to search for</param>
+        /// <returns>Company</returns>
+        public static Company GetCompany(int id)
+        {
+            var companies = GetCompanies().ToList();
+            return companies.FirstOrDefault(x => x.id == id);
+        }
 
-        //public static string RemovedCompany(int id)
-        //{
-        //    var companies = GetCompanies().ToList();
-        //    var companyToRemove = GetCompany(id);
+        public static string RemoveCompany(int id)
+        {
+            var companies = GetCompanies().ToList();
+            var companyToRemove = GetCompany(id);
 
-        //    companies.Remove(companyToRemove);
-        //    UpdateFile(Newtonsoft.Json.JsonConvert.SerializeObject(companies.ToArray()));
+            companies.Remove(companyToRemove);
+            UpdateFile(Newtonsoft.Json.JsonConvert.SerializeObject(companies.ToArray()));
 
-        //    return companyToRemove.name;
-        //}
+            return companyToRemove.name;
+        }
 
-        ///// <summary>
-        ///// Updates a company's info or adds a new company
-        ///// </summary>
-        ///// <param name="company">Company</param>
-        //public static int AddUpdateCompany(Company company)
-        //{
-        //    var companies = GetCompanies().ToList();
-        //    var retCompany = companies.FirstOrDefault(x => x.id == company.id);
+        /// <summary>
+        /// Updates a company's info or adds a new company
+        /// </summary>
+        /// <param name="company">Company</param>
+        public static int AddUpdateCompany(Company company)
+        {
+            var companies = GetCompanies().ToList();
+            var retCompany = companies.FindIndex(x => x.id == company.id);
+            var id = 0;
+            if (retCompany >= 0)
+            {
+                //update the company
+                companies[retCompany] = company;
+            }
+            else
+            {
+                //add the company
+                id = company.id = companies.Max(x => x.id) + 1;
+                companies.Add(company);
+            }
 
-        //    if (retCompany != null)
-        //    {
-        //        //update the company
-        //        retCompany = company;
-        //    }
-        //    else
-        //    {
-        //        //add the company
-        //        retCompany = company;
-        //        retCompany.id = companies.Max(x => x.id) + 1;
-        //        companies.Add(retCompany);
-        //    }
+            UpdateFile(Newtonsoft.Json.JsonConvert.SerializeObject(companies.ToArray()));
 
-        //    UpdateFile(Newtonsoft.Json.JsonConvert.SerializeObject(companies.ToArray()));
-
-        //    return retCompany.id;
-        //}
+            return id;
+        }
     }
 }

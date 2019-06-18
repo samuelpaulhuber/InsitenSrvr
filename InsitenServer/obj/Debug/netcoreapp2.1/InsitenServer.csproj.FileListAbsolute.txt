@@ -12,3 +12,4 @@ C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\
 C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.RazorTargetAssemblyInfo.cache
 C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.dll
 C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.pdb
+C:\Users\samhu\source\repos\InsitenServer\InsitenServer\obj\Debug\netcoreapp2.1\InsitenServer.csprojAssemblyReference.cache

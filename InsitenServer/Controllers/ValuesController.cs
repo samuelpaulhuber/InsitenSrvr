@@ -30,7 +30,69 @@ namespace InsitenServer.Controllers
             }
 
             return Ok(returnObject);
-            //return Request.CreateResponse(HttpStatusCode.OK, returnObject, Formatting.Indented); 
+        }
+
+        // GET api/values/5
+        [HttpGet("{id}")]
+        public ActionResult<ReturnObject> Get(int id)
+        {
+            var returnObject = new ReturnObject();
+
+            try
+            {
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(FileManager.GetCompany(id));
+                returnObject.Data = json;
+                returnObject.Success = true;
+            }
+            catch (Exception ex)
+            {
+                returnObject.Data = ex.Message;
+                returnObject.Success = false;
+            }
+
+            return Ok(returnObject);
+        }
+
+        // POST api/values
+        [HttpPost]
+        public ActionResult<ReturnObject> Post([FromBody]Company com)
+        {
+            var returnObject = new ReturnObject();
+
+            try
+            {
+                var id = FileManager.AddUpdateCompany(com);
+                returnObject.Data = id.ToString();
+                returnObject.Success = true;
+            }
+            catch (Exception ex)
+            {
+                returnObject.Data = ex.Message;
+                returnObject.Success = false;
+            }
+
+            return Ok(returnObject);
+        }
+
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public ActionResult<ReturnObject> Delete(int id)
+        {
+            var returnObject = new ReturnObject();
+
+            try
+            {
+                var removedName = FileManager.RemoveCompany(id);
+                returnObject.Data = removedName;
+                returnObject.Success = true;
+            }
+            catch (Exception ex)
+            {
+                returnObject.Data = ex.Message;
+                returnObject.Success = false;
+            }
+
+            return Ok(returnObject);
         }
     }
 }

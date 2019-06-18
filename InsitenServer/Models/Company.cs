@@ -38,7 +38,9 @@ namespace InsitenServer.Models
         public object address2 { get; set; }
         public string city { get; set; }
         public string state { get; set; }
-        public List<Contact> contacts { get; set; }
+        public string zip { get; set; }
+        public string description { get; set; }
+        public List<string> contacts { get; set; }
         public List<YearlyRevenue> yearlyRevenue { get; set; }
     }
 
