@@ -16,17 +16,14 @@ namespace InsitenServer.Models
 
     public class Contact
     {
-        public string contactName { get; set; }
-        public string contactPhone { get; set; }
-        public string contactEmail { get; set; }
-        public string contactPosition { get; set; }
+        public string id { get; set; }
+        public string text { get; set; }
     }
 
     public class YearlyRevenue
     {
-        public int year { get; set; }
-        public int grossRevenue { get; set; }
-        public int profit { get; set; }
+        public string year { get; set; }
+        public string profit { get; set; }
     }
 
     public class Company

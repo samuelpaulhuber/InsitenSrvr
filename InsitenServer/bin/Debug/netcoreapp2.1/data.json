@@ -11,9 +11,10 @@
       "contacts": [
         "bob smith"
       ],
-      "profits": [
+      "yearlyRevenue": [
         {
           "year": 2015,
+          "grossRevenue": 1263380,
           "profit": 579888
         }
       ]
