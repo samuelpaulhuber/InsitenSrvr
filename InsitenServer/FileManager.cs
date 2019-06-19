@@ -77,7 +77,7 @@ namespace InsitenServer
             else
             {
                 //add the company
-                id = companies == null || companies.Count == 0 ? 1 : companies.Max(x => x.id);
+                id = companies == null || companies.Count == 0 ? 1 : companies.Max(x => x.id) + 1;
                 company.id = id;
                 companies.Add(company);
             }
